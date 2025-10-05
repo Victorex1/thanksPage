@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Image Scroll</title>
+  <style>
+    *{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      width:100%;
+      justify-content: center;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+    }
+
+    .container{
+      display: flex;
+      flex-direction:column ;
+      justify-content: center;
+      align-items: center;
+      line-height: 20px;
+      width: 300px;
+    }
+    p{
+      text-align: center;      
+    }
+    h2{
+      margin: 25px 0;
+      font-size:xx-large;
+    }
+  </style>
+      <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+
+</head>
+<body>
+  <div class="container">
+     <div>
+<lord-icon
+    src="https://cdn.lordicon.com/axtddqfk.json"
+    trigger="in"
+    delay="100"
+    state="in-reveal"
+    style="width:150px;height:150px">
+</lord-icon>
+     </div>
+     <h2>Message sent!!</h2>
+     <p>You will be redirected back to the Home page in <b>( <span class="second">5</span> )</b> seconds</p>
+  </div>
+
+
+
+  <script>
+    
+    const second = () => {
+      const time = document.querySelector('.second')
+      let sec = 5;
+      let interval =setInterval(() => {
+        sec--
+          console.log(sec)
+        time.innerHTML = sec
+
+      }, 1000);
+
+       setTimeout(() => {
+    clearInterval(interval);
+    console.log("Interval stopped!");
+  }, 5000);
+
+    }
+
+   
+    second()
+  </script>
+</body>
+</html>
