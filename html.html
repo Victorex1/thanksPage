@@ -51,7 +51,7 @@
 </lord-icon>
      </div>
      <h2>Message sent!!</h2>
-     <p>You will be redirected back to the Home page in <b>( <span class="second">5</span> )</b> seconds</p>
+     <p>You will automatically be redirected back to the Home page in <b>( <span class="second">10</span> )</b> seconds</p>
   </div>
 
 
@@ -60,7 +60,7 @@
     
     const second = () => {
       const time = document.querySelector('.second')
-      let sec = 5;
+      let sec = 10;
       let interval =setInterval(() => {
         sec--
           console.log(sec)
@@ -70,8 +70,8 @@
 
        setTimeout(() => {
     clearInterval(interval);
-    console.log("Interval stopped!");
-  }, 5000);
+    window.location.href = 'https://coffee-service.vercel.app/'
+  }, 10000);
 
     }
 
