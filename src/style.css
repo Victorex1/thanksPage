@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 
-.unnl{
-    background: url(/thanks/public/bag.jpg);
+.icon{
+    position: relative;
+}
+.icon::after{
+    position: absolute;
+    content:'';
+    background-color:white;
 }
